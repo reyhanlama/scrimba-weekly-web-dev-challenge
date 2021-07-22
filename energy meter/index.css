@@ -1,0 +1,39 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+.container {
+  display: flex;
+  align-items: center;
+}
+
+body {
+  justify-content: center;
+  background: hotpink;
+  font-size: 24px;
+  height: 100vh;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.container {
+  flex-direction: column;
+  padding: 3em 5em;
+  border-radius: 10px;
+  background: white;
+  max-width: 400px;
+}
+
+meter {
+  height: 2em;
+  width: 10em;
+}
+
+input {
+  margin: 1em;
+  width: 4em;
+}
