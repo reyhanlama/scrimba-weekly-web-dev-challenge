@@ -2,4 +2,4 @@
 
 ## 1. Energy Bar
 
-## 2. Name Beautifer Completed
+## 2. Name Beautifer
