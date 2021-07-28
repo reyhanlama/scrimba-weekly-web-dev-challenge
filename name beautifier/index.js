@@ -1,31 +1,31 @@
-import randomcolor from "randomcolor"
+// import randomcolor from "randomcolor"
 
 const fontsArr = [
-        "Impact,Charcoal,sans-serif",
-        "Brush Script MT, cursive",
-        "Luminari, fantasy",
-        "Comic Sans MS, cursive",
-        "American Typewriter, serif"
-    ]
-    
-    
-const random = Math.floor(Math.random() * fontsArr.length);
-// console.log(fontsArr[random]);
+  "Impact,Charcoal,sans-serif",
+  "Brush Script MT, cursive",
+  "Luminari, fantasy",
+  "Comic Sans MS, cursive",
+  "American Typewriter, serif",
+]
+var colors = ["red", "green", "blue", "orange", "yellow"]
 
-const title = document.getElementById('name')
-const btn = document.getElementById('beautifierBtn').addEventListener('click',changeFont)
+const body = document.getElementById("body")
+const text = document.getElementById("name")
+const button = document.getElementById("beautifierBtn")
 
-
-  function changeFont() {
-  title.style.color = randomcolor()
-  title.style.fontFamily = fontsArr[random]
+const getRandoms = {
+  randomFont: function () {
+    return fontsArr[Math.floor(Math.random() * fontsArr.length)]
+  },
+  randomColor: function () {
+    return colors[Math.floor(Math.random() * colors.length)]
+  },
 }
 
-// When the button is clicked, the following things should change
- 
-// - font family (use array above)
-// - font color (either use randomcolor or your own array of color
-// - button color (match the font color)
-
-
-
+const handleChange = () => {
+  text.style.color = getRandoms.randomColor()
+  button.style.background = text.style.color
+  text.style.fontFamily = getRandoms.randomFont()
+  body.style.background = getRandoms.randomColor()
+}
+button.addEventListener("click", handleChange)
